@@ -1,0 +1,24 @@
+table {
+    border: 3px blue;
+    background-color: blue;
+}
+
+td {
+    width: 2cm;
+    height: 2cm;
+    margin: 0px;
+    padding: 0px;
+    border: 2px blue inset;
+    border-radius: 2cm;
+    background-color: white;
+    cursor: pointer;
+}
+
+td.player1 {
+    background-color: red;
+}
+
+td.player2 {
+    background-color: yellow;
+}
+
