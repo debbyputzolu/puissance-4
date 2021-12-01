@@ -26,6 +26,18 @@ class Puissance4 {
       this.element = document.querySelector(element_id);
       // add eventListener to manage the click
       this.element.addEventListener('click', (event) => this.handleClick(event));
+
+      // target button for new game
+      this.newGameButton = document.querySelector('#newGame');
+      
+      let self = this;
+      // add eventListener to manage the click on the button
+      this.newGameButton.addEventListener('click', function(){
+        // put player 1 first
+        this.lap=1;
+
+        self.resetGame();  
+    });
       
       // display
       this.displayGrid();
@@ -63,7 +75,7 @@ class Puissance4 {
       // color the box
       this.grid[row][column] = player;
       // count the lap
-      this.trokes++;
+      this.strokes++;
     }
   
     /* add a pawm in a column */
@@ -91,8 +103,7 @@ class Puissance4 {
       // check if the game is still in progress
       if (this.winner !== null) {
             if (window.confirm("Game over!\nDo you want to replay?")) {
-                this.reset();
-          this.diplayGrid();
+              this.resetGame();
               }
               return;
       }
@@ -141,7 +152,7 @@ class Puissance4 {
        true  : if the game is won by the player
        false : if the game continues
    */
-      checkWin(row, column, player) {
+    checkWin(row, column, player) {
           // check horizontal
       let count = 0;
       for (let j = 0; j < this.cols; j++) {
@@ -171,10 +182,10 @@ class Puissance4 {
       }
       
       return false;
-      }
+    }
   
     // reset the grid 
-    reset() {
+    resetGame() {
       for (let i = 0; i < this.rows; i++) {
         for (let j = 0; j < this.columns; j++) {
           this.grid[i][j] = 0;
@@ -182,8 +193,9 @@ class Puissance4 {
       }
           this.stroke = 0;
       this.winner = null;
-      }
+      this.displayGrid();
+    }
   }
   
   // initialization of grid.
-  let p4 = new Puissance4('#grid');
+  let puissance4 = new Puissance4('#grid');
