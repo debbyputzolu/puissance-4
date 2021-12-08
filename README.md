@@ -17,3 +17,7 @@ Il y a plusieurs possibilités d'amélioration :
 -> Possibilité d'améliorer un peu le code (remettre à zero les classes CSS au moment du reset plutot que de rereer toute la grille)
 -> Possibilité de changer le theme couleur
 -> Possibilité de rajouter l'effet d'un jeton qui tombe
+
+
+![Capture d’écran 2021-12-08 à 12 56 35](https://user-images.githubusercontent.com/85224891/145204880-b3f4345f-f1e5-4ebd-8a4f-18c290d081e0.png)
+
